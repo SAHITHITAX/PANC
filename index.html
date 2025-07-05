@@ -46,6 +46,12 @@
   <label for="address6"> Pincode / Zip code </label>
   <input type="text" id="address6" name="address6"><br>
 
+  <label for="mobile"> MOBILE </label>
+  <input type="text" id="mobile" name="mobile"><br>
+
+  <label for="mail"> Email </label>
+  <input type="text" id="mail" name="mail"><br>
+
 
   <label for="gender">Gender:</label>
   <select id="gender" name="gender">
@@ -313,7 +319,7 @@ if (proofdobValue !== null) {
   
 });
 
-let   address, address1, address2, address3, address4, address5, address6, gender ;
+let   address, address1, address2, address3, address4, address5, address6, gender, mobile, email ;
 
 function collectDetails() {
   
@@ -326,10 +332,10 @@ function collectDetails() {
   address4 = document.getElementById("address4").value;
   address5 = document.getElementById("address5").value;
   address6 = document.getElementById("address6").value;
- 
-
-
   gender = document.getElementById("gender").value;
+  mobile = document.getElementById("mobile").value;
+  mail = document.getElementById("mail").value;
+
   lname = lNameValue;  // Now it works because fNameValue is global
   mname = mNameValue;  // Now it works because fNameValue is global
   fname = fNameValue;  // Now it works because fNameValue is global
@@ -491,8 +497,8 @@ async function renderFileAsImage(file) {
                                 <body>
 
 
-<div>     <p><strong></strong><br><img src="${ackImgUrl}" class="a4"/></p></div>
-<div style="border: 1px solid #000; padding: 0px; margin: 10px; font-family: Arial, sans-serif;">
+<div>     <p><strong></strong><br><img src="${ackImgUrl}" class="a4"/></p></div><br><br><br><br><br>
+<div style="border: 1px solid #000; padding: 0px; margin: 5px; font-family: Arial, sans-serif;">
 
 
 
@@ -516,12 +522,12 @@ photograph
 </td>
 	
             				  <td style="width: 60%; text-align: center; vertical-align: top;">
-            				    <h1 style="margin: 0px 0; font-size: 14px;">Request For New PAN Card Or/ And Changes Or Correction in PAN Data</h1>
-<div style="margin-right: -150px; margin-left: -150px; background: #d2cfcf; text-align: left; height: 22px; display: flex; align-items: center;">
-  <h2 style="margin-left: 155px; font-size: 12px; text-align: left;"> Permanent Account Number (PAN)</h2>
-</div>
-<div style="width: 350px; height: 50px; margin-top: 2px;">
-  <table style="width: 100%; height: 50px; font-size: 12px; border-collapse: collapse; border: 1px solid black;">
+            				    <h1 style="margin: 0px 0; font-size: 17px;">Request For New PAN Card Or/ And Changes Or Correction in PAN Data</h1> <br><br><br><br><br>
+
+  <h1 style="margin: 0px 0; font-size: 15px;"> Permanent Account Number (PAN)</h1>
+
+
+  <table style="margin-left: 147px; margin-top: 2px; width: 50%; height: 30px; font-size: 12px; border-collapse: collapse; border: 1px solid black;">
       <tr style="height: 26px;">
       <td style="padding:0px; text-align: center; border: 1px solid black; width: 10%;"><strong>${pan ? pan.charAt(0) : " "}</strong></td>
       <td style="padding:0px; text-align: center; border: 1px solid black; width: 10%;"><strong>${pan ? pan.charAt(1) : " "}</strong></strong></td>
@@ -535,12 +541,9 @@ photograph
       <td style="padding:0px; text-align: center; border: 1px solid black; width: 10%;"><strong>${pan ? pan.charAt(9) : " "}</strong></td>
     </tr>
   </table>
-<div style="margin-right: -150px; margin-left: -150px; background: #d2cfcf; text-align: left; height: 22px; display: flex; align-items: center;">
-  <h2 style="margin-left: 155px; font-size: 12px; text-align: left;">  Please read Instructions ‘h’ & ‘i’ for selecting boxes on left margin of this form</h2>
-</div>
+  
+<p style="margin: 0px 0; font-size: 15px; margin-top: 2px;">  Please read Instructions ‘h’ & ‘i’ for selecting boxes on left margin of this form</9>
 
-</div>
- 					 </div>
 					 </td>
            				 <td style="width: 20%; text-align: right; vertical-align: top;margin-right: 5px">
            			          <img id="emp-photo1" src="${photoUrl}" alt="Employee Photo" style="width: 150px; height: 190px; border: 1px solid #ccc; border-radius: 0px;" />
@@ -555,7 +558,7 @@ photograph
       Signature / Left Thumb Impression across this photo
     </td>
     <td></td>
-    <td rowspan="2" style="width:280px; text-align: center; border: 1px solid #000;">
+    <td rowspan="2" style="width:300px; text-align: center; border: 1px solid #000;">
       <img src="${signUrl}" alt="Signature" width="250">
     </td>
   </tr>
@@ -573,33 +576,36 @@ photograph
 </table>
 
 
-<div style="background: #d2cfcf; align-items: center; height: 20px; display: flex; align-items: center; margin-top: 2px">
-  <h2 style="margin: 0; font-size: 12px; line-height: 10px; padding: 2px;">
+<div style="width:67%;background: #d2cfcf; align-items: center; height: 24px; display: flex; align-items: center; margin-top: -70px">
+    <div style="width: 20px; height: 20px; border: 1px solid black; background-color: white; text-align: center; line-height: 20px; margin: 0 5px;">
+    <strong>✓</strong>
+  </div>
+<h2 style="margin: 0; font-size: 12px; line-height: 10px; padding: 2px;">
     1&nbsp;Full Name (Full expanded name to be mentioned as appearing in proof of identity/date of birth/address documents: initials are not permitted)
   </h2>
 </div>
 
 
 <div style="font-size: 12px;">
- <table style="width: 90%; white-space: nowrap;font-size: 12px; padding:2px; border-collapse: separate; border-spacing: 0 5px; margin-left: 10px; margin-right: 25px; margin-top: -5px; ">
+ <table style="width: 90%; white-space: nowrap;font-size: 12px; padding:2px; border-collapse: separate; border-spacing: 0 5px; margin-left: 10px; margin-right: 25px; margin-top: 10px; ">
 
         <tr>
            <td style="text-align: left; width: 30%; border: 0px solid #ccc; margin-left: 0px; vertical-align: middle;display: flex; align-items: center;">
-  Please select title,
-  <img style="width: 17px; height: 17px;" src="https://imgur.com/nto6NOS.png">&nbsp; as applicable
+  <strong>Please select title,</strong>
+  <img style="width: 17px; height: 17px;" src="https://imgur.com/nto6NOS.png">&nbsp; <strong>as applicable</strong>
 </td>
 
             <td style="border: 1px solid black; font-size: 15px;"><strong>${gender === "M" ? "✓" : " "}</strong></td>
-            <td colspan="2" style="border: 0px solid #ccc;">Shri</td>
+            <td colspan="2" style="border: 0px solid #ccc;"><strong>Shri</strong></td>
             <td style="border: 1px solid black; font-size: 15px;"><strong>${gender === "F" ? "✓" : " "}</strong></td>
-            <td colspan="2" style="border: 0px solid #ccc;">Smt.</td>
+            <td colspan="2" style="border: 0px solid #ccc;"><strong>Smt.</strong></td>
             <td style="border: 1px solid black; font-size: 15px;"><strong>${gender === "K" ? "✓" : " "}</strong></td>
-            <td colspan="3" style="border: 0px solid #ccc;">Kumari</td>
+            <td colspan="3" style="border: 0px solid #ccc;"><strong>Kumari</strong></td>
             <td style="border: 1px solid black; font-size: 15px;"><strong>${gender === "L" ? "✓" : " "}</strong></td>
-            <td colspan="2" style="border: 0px solid #ccc;">M/s</td>
+            <td colspan="2" style="border: 0px solid #ccc;"><strong>M/s</strong></td>
             <td colspan="16" style="border: 0px solid #ccc;"></td>
         </tr>
-        <tr style="border: 1px solid black; height: 9px">
+        <tr style="border: 1px solid black; height: 9px; margin-top: 10px;">
             <td style="text-align: left; width: 30%; border: 0px solid #ccc; margin-left: 5px">Last Name / Surname</td>
 <td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${lname ? lname.charAt(0) : " "}</strong></td>
 <td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${lname ? lname.charAt(1) : " "}</strong></td>
@@ -692,6 +698,9 @@ photograph
 
 
 <div style="background: #d2cfcf; height: 20px; display: flex; align-items: center;"">
+    <div style="width: 20px; height: 20px; border: 1px solid black; background-color: white; text-align: center; line-height: 20px; margin: 0 5px;">
+    <strong>✓</strong>
+  </div>
   <h2 style="margin: 0; font-size: 12px; display: flex; align-items: center; padding: 2px">
    2&nbsp;Abbreviations of the above name, as you would like it, to be printed on the PAN card
   </h2>
@@ -783,13 +792,18 @@ photograph
 </div>
 
 <div style="background: #d2cfcf; display: flex; align-items: center; margin-top: 2px">
+    <div style="width: 20px; height: 20px; border: 1px solid black; background-color: white; text-align: center; line-height: 20px; margin: 0 5px;">
+    <strong>✓</strong>
+  </div>
 
- <h2 style="margin: 0; font-size: 12px;height: 20px; display: flex; align-items: center; margin-left: 2px">6	Details of Parents (applicable only for individual applicants)</h2>
+ <h2 style="margin: 0; font-size: 12px;height: 20px; display: flex; align-items: center; margin-left: 2px"> 2 Details of Parents (applicable only for Individual applicants)</h2>
 
 </div>
 
 
-
+<div style="background-color: ;">
+<h2 style="margin: px 0; font-size: 12px; margin-left: 12px; margin-top: 5px;"> Father’s Name (Mandatory. Even married women should fill in father’s name only)</h2>
+</div>
 <div style="font-size: 12px; margin-top: -5px;">
  <table style="width: 90%; white-space: nowrap;font-size: 12px; padding:2px; border-collapse: separate; border-spacing: 0 5px; margin-left: 10px; margin-right: 25px; ">
 
@@ -882,7 +896,7 @@ photograph
   </table>
 </div>
 <div style="background-color: ;">
-<h2 style="margin: px 0; font-size: 12px; margin-left: 12px; margin-top: -5px;">Mother’s Name (optional except where mother is a single parent and PAN is applied by furnishing the name of mother only)</h2>
+<h2 style="margin: px 0; font-size: 12px; margin-left: 12px; margin-top: 5px;">Mother’s Name (optional)</h2>
 </div>
 
 
@@ -976,21 +990,22 @@ photograph
 
   </table>
 
-    <p style="margin-top: -5px; margin-left: 12px;">Select the name of either father or mother which you may like to be printed on PAN card (Select one only)</p>
-    <p style="margin-top: -5px; margin-left: 12px;display: flex; align-items: center;"> <img src="https://imgur.com/nto6NOS.png" style="width: 20px; height: 20px;">&nbsp;
+    <p style="margin-top: 5px; margin-left: 12px; font-size: 15px;"> <strong>Select the name of either father or mother which you may like to be printed on PAN card (Select one only) </strong></p>
+    
+    <p style="margin-top: -5px; margin-left: 12px;"> <strong>(In case no option is provided then PAN card will be issued with father’s name)&nbsp; <img src="https://imgur.com/nto6NOS.png" style="width: 20px; height: 20px;">&nbsp;
 
  Father’s name  &nbsp;   <img src="https://imgur.com/pERaKpz.png"    style="width: 20px; height: 20px;" >&nbsp;
 
-      Mother’s name            (Please tick as applicable)</p>
-    <p style="margin-top: -5px; margin-left: 12px;"> (In case no option is provided then PAN card will be issued with father’s name except where mother is a single parent and you wish to apply for PAN 
-by furnishing name of the mother only)’</p>
+      Mother’s name         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   (Please tick as applicable)</strong></p>
 </div>
 
 
+<div style="background: #d2cfcf; height: 20px; display: flex; align-items: center; margin-left: 2px; font-size: 12px;">
+    <div style="width: 20px; height: 20px; border: 1px solid black; background-color: white; text-align: center; line-height: 20px; margin: 0 5px;">
+    <strong>✓</strong>
+  </div>
 
-<div style="background: #d2cfcf; height: 20px; display: flex; align-items: center; margin-top: 2px; margin-left: 2px">
-
- <h2 style="margin: 0; font-size: 12px; display: flex; align-items: center; ">5	Date of Birth/Incorporation/Agreement/Partnership or Trust Deed/ Formation of Body of individuals or Association of Persons</h2>
+ <h2 style="margin: 0; font-size: 12px; display: flex; align-items: center; "> 3 Date of Birth/Incorporation/Agreement/Partnership/Trust Deed/ Formation of Body of individuals or Association of Persons </h2>
 
 </div>
 <div style="font-size: 12px;">
@@ -1035,31 +1050,59 @@ by furnishing name of the mother only)’</p>
 
 
 <div style="background: #d2cfcf; height: 20px; display: flex; align-items: center; margin-left: 2px; font-size: 12px;">
-  <span style="margin-right: 10px;">4 Gender (for Individual applicants only)</span>
+   <div style="width: 20px; height: 20px; border: 1px solid black; background-color: white; text-align: center; line-height: 20px; margin: 0 5px;">
+    <strong>✓</strong>
+  </div>
 
+
+<span style="margin-right: 10px;"> <strong>4 Gender (for Individual applicants only) </strong></span>
   <div style="width: 17px; height: 17px; border: 1px solid black; background-color: white; text-align: center; line-height: 20px; margin: 0 5px;">
     <strong>${gender === "M" ? "✓" : " "}</strong>
   </div>
-  <span style="margin-right: 15px;">Male</span>
+
+  <span style="margin-right: 15px;"><strong>Male</strong></span>
 
   <div style="width: 17px; height: 17px; border: 1px solid black; background-color: white; text-align: center; line-height: 20px; margin: 0 5px;">
     <strong>${gender === "K" ? "✓" : ""} ${gender === "F" ? "✓" : ""}</strong>
   </div>
-  <span style="margin-right: 15px;">Female</span>
+  <span style="margin-right: 15px;"><strong>Female</strong></span>
 
   <div style="width: 17px; height: 17px; border: 1px solid black; background-color: white; text-align: center; line-height: 20px; margin: 0 5px;">
-    <strong>${gender === "T" ? "✓" : " "}</strong>
+    <strong></strong>
   </div>
-  <span style="margin-right: 15px;">Transgender</span>
+  <span style="margin-right: 15px;"><strong>Transgender</strong></span>
 
-  <span>(please tick as applicable)</span>
+  <span><strong>(please tick as applicable)</strong></span>
+</div>
+<div style="background: #d2cfcf; height: 20px; display: flex; align-items: center; margin-top: 2px">
+    <div style="width: 20px; height: 20px; border: 1px solid black; background-color: white; text-align: center; line-height: 20px; margin: 0 5px;">
+    <strong>✓</strong>
+  </div>
+<h2 style="margin: px 0; font-size: 12px;">5 		 Photo Mismatch </h2>
+</div>
+<div style="background: #d2cfcf; height: 20px; display: flex; align-items: center; margin-top: 2px">
+    <div style="width: 20px; height: 20px; border: 1px solid black; background-color: white; text-align: center; line-height: 20px; margin: 0 5px;">
+    <strong>✓</strong>
+  </div>
+<h2 style="margin: px 0; font-size: 12px;">6 		 Signature Mismatch </h2>
 </div>
 
 
-
-
 <div style="background: #d2cfcf; height: 20px; display: flex; align-items: center; margin-top: 2px">
-<h2 style="margin: px 0; font-size: 12px;">7		Address</h2>
+    <div style="width: 20px; height: 20px; border: 1px solid black; background-color: white; text-align: center; line-height: 20px; margin: 0 5px;">
+    <strong>✓</strong>
+  </div>
+<h2 style="margin: px 0; font-size: 12px;">7		Address for Communication</h2> <div style="width: 17px; height: 17px; border: 1px solid black; background-color: white; text-align: center; line-height: 20px; margin: 0 5px;">
+    <strong>✓</strong>
+  </div>
+  <span style="margin-right: 15px;">Residence</span>
+
+  <div style="width: 17px; height: 17px; border: 1px solid black; background-color: white; text-align: center; line-height: 20px; margin: 0 5px;">
+    <strong></strong>
+  </div>
+  <span style="margin-right: 15px;">Office</span>
+
+<span>(please tick as applicable)</span>
 </div>
 <p style="margin: px 0; font-size: 12px; margin-left: 12px; "><strong>Residence Address</strong></p>
 <div style="font-size: 12px;">
@@ -1230,14 +1273,19 @@ by furnishing name of the mother only)’</p>
 </div>
 
 <div style="background: #d2cfcf; height: 20px; display: flex; align-items: center; margin-top: 2px; margin-left: 2px">
+    <div style="width: 20px; height: 20px; border: 1px solid black; background-color: white; text-align: center; line-height: 20px; margin: 0 5px;">
+    <strong></strong>
+  </div>
 
  <h2 style="margin: 0; font-size: 12px; display: flex; align-items: center; ">8 If you desire to update your other address also, give required details In additional sheet.</h2>
 
 </div>
 
 
-<div style="background: #d2cfcf; display: height: 20px; flex; align-items: center; margin-left: 2px; margin-top: 2px;">
-
+<div style="background: #d2cfcf; display: height: 20px; display: flex; align-items: center; margin-left: 2px; margin-top: 2px;">
+    <div style="width: 20px; height: 20px; border: 1px solid black; background-color: white; text-align: center; line-height: 20px; margin: 0 5px;">
+    <strong>✓</strong>
+  </div>
   <h2 style="margin: 0; font-size: 12px; display: flex; align-items: center;">9		Telephone Number & Email ID details</h2>
   
 </div>
@@ -1277,23 +1325,23 @@ by furnishing name of the mother only)’</p>
 <td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"></td>
 <td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"></td>
 <td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${tel ? tel.charAt(0) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${tel ? tel.charAt(1) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${tel ? tel.charAt(2) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${tel ? tel.charAt(3) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${tel ? tel.charAt(4) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${tel ? tel.charAt(5) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${tel ? tel.charAt(6) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${tel ? tel.charAt(7) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${tel ? tel.charAt(8) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${tel ? tel.charAt(9) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${tel ? tel.charAt(10) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${tel ? tel.charAt(11) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${tel ? tel.charAt(12) : " "}</strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${mobile ? mobile.charAt(0) : " "}</strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${mobile ? mobile.charAt(1) : " "}</strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${mobile ? mobile.charAt(2) : " "}</strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${mobile ? mobile.charAt(3) : " "}</strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${mobile ? mobile.charAt(4) : " "}</strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${mobile ? mobile.charAt(5) : " "}</strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${mobile ? mobile.charAt(6) : " "}</strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${mobile ? mobile.charAt(7) : " "}</strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${mobile ? mobile.charAt(8) : " "}</strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${mobile ? mobile.charAt(9) : " "}</strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${mobile ? mobile.charAt(10) : " "}</strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${mobile ? mobile.charAt(11) : " "}</strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${mobile ? mobile.charAt(12) : " "}</strong></td>
        </tr>
         <tr>
             <td style="text-align: left; width: 10%; border: 0px solid #ccc; margin-left: 5px">Email ID</td>
-<td colspan="25" style="width: 20px; height: 20px; border: 1px solid black; text-align: left; margin-left: 10px; font-size: 17px;">&nbsp;&nbsp;<strong>${email}</strong></td>
+<td colspan="25" style="width: 20px; height: 20px; border: 1px solid black; text-align: left; margin-left: 10px; font-size: 17px;">&nbsp;&nbsp;<strong>${mail}</strong></td>
       </tr>
 
     </table>
@@ -1301,18 +1349,15 @@ by furnishing name of the mother only)’</p>
 
 
 <div style="background: #d2cfcf;  height: 20px; display: flex; align-items: center; margin-left: 2px">
+    <div style="width: 20px; height: 20px; border: 1px solid black; background-color: white; text-align: center; line-height: 20px; margin: 0 5px;">
+    <strong>✓</strong>
+  </div>
   <h2 style="margin: 0; font-size: 12px; display: flex; align-items: center; ">
-   12	In case of a person, who is required to quote Aadhaar number  or the Enrolment ID of Aadhaar application form  as per section 139 AA
-  </h2>
-</div>
+  10 AADHAAR number (if allotted)
+  </h2> 
 
-<div style="font-size: 12px;">
- <table style="width: 97%; white-space: nowrap;font-size: 12px; padding:2px; border-collapse: separate; border-spacing: 0 5px; margin-left: 10px; margin-right: 25px; ">
-
-
-        <tr style="border: 1px solid black; height: 17px; ">
+ <table><tr style="border: 1px solid black; height: 17px; background: white; white-space: nowrap;font-size: 12px; padding:2px; border-collapse: separate; border-spacing: 0 0px;">
            
-<td colspan="13" style="width: 20px; height: 20px; border: 0px solid black; text-align: left;">Please mention your AADHAAR number (if allotted) </td>
 <td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${aadhaarNo ? aadhaarNo.charAt(0) : " "}</strong></td>
 <td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${aadhaarNo ? aadhaarNo.charAt(1) : " "}</strong></td>
 <td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${aadhaarNo ? aadhaarNo.charAt(2) : " "}</strong></td>
@@ -1325,80 +1370,19 @@ by furnishing name of the mother only)’</p>
 <td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${aadhaarNo ? aadhaarNo.charAt(9) : " "}</strong></td>
 <td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${aadhaarNo ? aadhaarNo.charAt(10) : " "}</strong></td>
 <td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${aadhaarNo ? aadhaarNo.charAt(11) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>  
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>  
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>  
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>  
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>  
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>  
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>  
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>  
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>  
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>  
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>  
+  
 
 
-       </tr>
+       </tr></table>
 
-        <tr style="border: 1px solid black; height: 17px;background-color: #d2cfcf;">
-           
-<td colspan="26" style="width: 20px; height: 20px; border: 0px solid black; text-align: left;">If AADHAAR number is not allotted, please mention the enrolment ID of Aadhaar application form</td>
+</div>
 
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>  
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>  
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>  
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>  
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>  
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>  
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>  
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>  
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>  
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>  
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>     
-  </tr>
-<tr style="border: 1px solid black; height: 17px; background-color: #d2cfcf;">
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>         
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;">N</td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;">O</td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;">T</td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;">A</td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;">P</td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;">P</td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;">L</td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;">I</td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;">C</td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;">A</td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;">B</td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;">L</td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;">E</td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;">W.</td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;">E.</td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;">F.</td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;">0</td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;">1</td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;">1</td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;">0</td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;">2</td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;">0</td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;">2</td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;">4</td>
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>
-<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"></td>	
-       </tr>
- <tr style="border: 1px solid black; height: 17px">
+<div style="font-size: 12px;">
+ <table style="width: 97%; white-space: nowrap;font-size: 12px; padding:2px; border-collapse: separate; border-spacing: 0 5px; margin-left: 10px; margin-right: 25px; ">
+
+
+     
+        <tr style="border: 1px solid black; height: 17px">
            
 <td colspan="24" style="width: 20px; height: 20px; border: 0px solid black; text-align: left;">Name as per AADHAAR letter or card  or as per the Enrolment ID of Aadhaar application form </td>
 
@@ -1530,8 +1514,11 @@ by furnishing name of the mother only)’</p>
 
 
 <div style="background: #d2cfcf; height: 20px; display: flex; align-items: center;"">
+    <div style="width: 20px; height: 20px; border: 1px solid black; background-color: white; text-align: center; line-height: 20px; margin: 0 5px;">
+    <strong>✓</strong>
+  </div>
   <h2 style="margin: 0; font-size: 12px; display: flex; align-items: center; padding: 2px">
-   2&nbsp;Abbreviations of the above name, as you would like it, to be printed on the PAN card
+   11 Mention other Permanent Account Numbers (PANs) inadvertently allotted to you
   </h2>
 </div>
 
@@ -1539,85 +1526,58 @@ by furnishing name of the mother only)’</p>
  <table style="width: 97%; white-space: nowrap;font-size: 12px; padding:2px; border-collapse: separate; border-spacing: 0 5px; margin-left: 10px; margin-right: 25px; ">
 
                <tr style="border: 1px solid black; height: 9px">
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(0) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(1) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(2) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(3) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(4) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(5) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(6) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(7) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(8) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(9) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(10) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(11) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(12) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(13) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(14) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(15) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(16) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(17) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(18) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(19) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(20) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(21) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(22) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(23) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(24) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(25) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(26) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(28) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(29) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(30) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(31) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(32) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(33) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(34) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(35) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(36) : " "}</strong></td>
-
-        </tr>
-        <tr style="border: 1px solid black; height: 17px">
-           
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(37) : "  "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(38) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(39) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(40) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(41) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(42) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(43) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(44) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(45) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(46) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(47) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(48) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(49) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(50) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(51) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(52) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(53) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(54) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(55) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(57) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(58) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(59) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(60) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(61) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(62) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(63) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(64) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(65) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(66) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(67) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(68) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(69) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(70) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(71) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(72) : " "}</strong></td>
-<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong>${namecard ? namecard.charAt(73) : " "}</strong></td>       </tr>
-
-
+<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"><strong>PAN 1</strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"><strong>PAN 2</strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"><strong>PAN 3</strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 0px solid black; text-align: center;"><strong>PAN 4</strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+<td style="width: 20px; height: 20px; border: 1px solid black; text-align: center;"><strong></strong></td>
+</tr>
+       
     </table>
+</div>
+<div style="background: #d2cfcf; height: 20px; display: flex; align-items: center;"">
+  <h2 style="margin: 0; font-size: 12px; display: flex; align-items: center; padding: 2px">
+ 12 Verification
+  </h2>
 </div>
 
 
@@ -1651,7 +1611,7 @@ by furnishing name of the mother only)’</p>
 
 </div>
 <div style="font-size: 12px;">
-<table style="width: 97%; white-space: nowrap; font-size: 15px; border-collapse: collapse; margin-left: 10px; margin-right: 25px;">
+<table style="width: 97%; white-space: nowrap; font-size: 15px; border-collapse: collapse; margin-left: 10px; margin-right: 25px; margin-top: -12px;margin-bottom: 5px;">
 <tr style="height: 17px;">
     <td colspan="23" style="border: none; text-align: left;"></td>
     <td colspan="14" rowspan="4" style="border: 1px solid black; text-align: center;"> 
@@ -1693,7 +1653,7 @@ by furnishing name of the mother only)’</p>
         Signature / Left Thumb Impression of Applicant (inside the box)
     </td>
 </tr>
-</table><br></div>
+</table></div>
 
 
       </div>
